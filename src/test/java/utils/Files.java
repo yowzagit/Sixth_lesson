@@ -1,5 +1,7 @@
 package utils;
 
+import com.codeborne.pdftest.PDF;
+import com.codeborne.xlstest.XLS;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -18,4 +20,13 @@ public class Files {
     public static File getFile(String path){
         return new File(path);
     }
+
+    public static PDF getPdf (String path) throws IOException {
+        return new PDF(getFile(path));
+    }
+
+    public static XLS getXls (String path) throws IOException {
+        return new XLS(getFile(path));
+    }
+
 }
