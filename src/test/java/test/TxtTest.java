@@ -1,7 +1,6 @@
 package test;
 
 import org.junit.jupiter.api.Test;
-
 import java.io.IOException;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -14,7 +13,6 @@ public class TxtTest {
         String txtFilePath = "./src/test/resources/files/1.txt";
         String expectedData = "Hello, World!";
         String actualData = readTextFromPath(txtFilePath);
-
         assertThat(actualData, containsString(expectedData));
     }
 }
