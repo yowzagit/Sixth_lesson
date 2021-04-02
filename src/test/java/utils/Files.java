@@ -24,19 +24,20 @@ public class Files {
         File file = new File(path);
         return readTextFromFile(file);
     }
-    public static File getFile(String path){
+
+    public static File getFile(String path) {
         return new File(path);
     }
 
-    public static PDF getPdf (String path) throws IOException {
+    public static PDF getPdf(String path) throws IOException {
         return new PDF(getFile(path));
     }
 
-    public static XLS getXls (String path) {
+    public static XLS getXls(String path) {
         return new XLS(getFile(path));
     }
 
-    public static String readXlsxFromPath(String path){
+    public static String readXlsxFromPath(String path) {
         String result = "";
         XSSFWorkbook myExcelBook = null;
 

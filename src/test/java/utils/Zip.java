@@ -11,4 +11,8 @@ public class Zip {
         }
         zipFile.extractAll(unzipPath);
     }
+
+    public static void unzip(String path, String unzipPath) throws ZipException {
+        unzip(path, unzipPath, "");
+    }
 }
