@@ -7,15 +7,20 @@ repositories {
 }
 
 def selenideVersion = "5.20.1",
-    junitVersion = "5.7.1"
+    junitVersion = "5.7.1",
+    pdfTestVersion = "1.5.1",
+    xlsTestVersion = "1.4.3",
+    zip4jVersion = "1.3.2",
+    hamcrestAllVersion = "1.3"
+
 
 dependencies {
-    testImplementation (
+    testImplementation(
             "com.codeborne:selenide:$selenideVersion",
-            "com.codeborne:pdf-test:1.5.1",
-            "com.codeborne:xls-test:1.4.3",
-            "net.lingala.zip4j:zip4j:1.3.2",
-            "org.hamcrest:hamcrest-all:1.3",
+            "com.codeborne:pdf-test:$pdfTestVersion",
+            "com.codeborne:xls-test:$xlsTestVersion",
+            "net.lingala.zip4j:zip4j:$zip4jVersion",
+            "org.hamcrest:hamcrest-all:$hamcrestAllVersion",
             "org.junit.jupiter:junit-jupiter-api:$junitVersion")
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
 }
